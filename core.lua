@@ -6,8 +6,6 @@ noTargetAuras = false, -- true to disable oUF buffs/debuffs on the target frame
 noToTAuras = false, -- true to disable oUF buffs/debuffs on the ToT frame
 noRaid = false, -- true to disable raid frames
 
-font = [=[Interface\Addons\oUF_Caellian\media\fonts\neuropol x cd rg.ttf]=],
-
 scale = 1, -- scale of the unitframes (1 being 100%)
 
 lowThreshold = 20, -- low mana threshold for all mana classes
@@ -29,18 +27,17 @@ coords = {
 	raidY = -15, -- vertical offset for the raid frames
 }}}
 local settings = Caellian.oUF
-local mediaPath = [=[Interface\Addons\oUF_Caellian\media\]=]
 
 local floor, format = math.floor, string.format
 
-local normtexa = mediaPath..[=[textures\normtexa]=]
-local glowTex = mediaPath..[=[textures\glowtex]=]
-local bubbleTex = mediaPath..[=[textures\bubbletex]=]
-local buttonTex = mediaPath..[=[textures\buttontex]=]
-local highlightTex = mediaPath..[=[textures\highlighttex]=]
+local normtexa     = [[Interface\Addons\recMedia\caellian\normtexa]]
+local glowTex      = [[Interface\Addons\recMedia\caellian\glowtex]]
+local bubbleTex    = [[Interface\Addons\recMedia\caellian\bubbletex]] -- non-existant
+local buttonTex    = [[Interface\Addons\recMedia\caellian\buttontex]] -- non-existant
+local highlightTex = [[Interface\Addons\recMedia\caellian\highlighttex]] -- non-existant
 
-local font = settings.font
-local fontn = mediaPath..[=[fonts\russel square lt.ttf]=]
+local font  = [[Interface\Addons\recMedia\fonts\25321Russel Square LT.ttf]]
+local fontn = [[Interface\Addons\recMedia\fonts\25321Russel Square LT.ttf]]
 
 local myName = UnitName("player")
 local _, playerClass = UnitClass("player")
